@@ -1,11 +1,18 @@
 <html> 
      <header> 
+          <script>
+               $("#name1").change(function(){
+                    var name = $("#name1").val();
+                    $("#img1").attr("src", "/img/{0}.png".format(name));
+               });
+          </script>
      </header> 
      <body> 
-         <img src="/static/github.png"  alt="测试" />
-          <select>
-               <option>111</option>
-               <option>222</option>
+         <img id="img1" src="/static/github.png"  alt="测试" />
+          <select id="name1">
+               <option selected="selected" value=""></option>
+               <option value="Inoue_Nagi">Inoue Nagi</option>
+               <option value="Sugawara_Satuski">Sugawara Satuski</option>
           </select>
      </body> 
  </html> 
