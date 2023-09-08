@@ -2,7 +2,7 @@
      <header> 
      </header> 
      <body> 
-         <img id="img1" src="/static/github.png"  alt="测试" />
+          <img id="img1" src="/static/github.png"  alt="测试" />
           <select id="name1">
                <option selected="selected" value=""></option>
                <option value="Inoue_Nagi">Inoue Nagi</option>
@@ -11,9 +11,10 @@
      </body> 
      <script>
           const select1 = document.getElementById("name1");
+          const img1 = document.getElementById("img1");
           select1.addEventListener("change", event => {
                const name = event.target.value;
-               $("#img1").attr("src", "/img/{0}.png".format(name));
+               img1.attr("src", "/img/{0}.png".format(name));
           });
      </script>
  </html> 
