@@ -1,8 +1,9 @@
 <html> 
      <header> 
           <script>
-               $("#name1").change(function(){
-                    var name = $("#name1").val();
+               const select1 = document.getElementById("name1");
+               select1.addEventListener("change", event => {
+                    const name = event.target.value;
                     $("#img1").attr("src", "/img/{0}.png".format(name));
                });
           </script>
