@@ -1,12 +1,5 @@
 <html> 
      <header> 
-          <script>
-               const select1 = document.getElementById("name1");
-               select1.addEventListener("change", event => {
-                    const name = event.target.value;
-                    $("#img1").attr("src", "/img/{0}.png".format(name));
-               });
-          </script>
      </header> 
      <body> 
          <img id="img1" src="/static/github.png"  alt="测试" />
@@ -16,4 +9,11 @@
                <option value="Sugawara_Satuski">Sugawara Satuski</option>
           </select>
      </body> 
+     <script>
+          const select1 = document.getElementById("name1");
+          select1.addEventListener("change", event => {
+               const name = event.target.value;
+               $("#img1").attr("src", "/img/{0}.png".format(name));
+          });
+     </script>
  </html> 
